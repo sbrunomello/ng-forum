@@ -9,13 +9,10 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class TopicosComponent implements OnInit {
 
-  constructor(private httpClient : HttpClient) {}
+  constructor(private http : HttpClient) {}
 
   ngOnInit(): void {
-
-    this.httpClient.get('portal/logout').pipe(map(res => {
-        console.log('deu bom')
-    })).subscribe(res => {});
+ //this.http.get('https://xforum-api.herokuapp.com/topicos');
   }
 
 }
